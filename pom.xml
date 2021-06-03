@@ -23,6 +23,7 @@
         <module>config-server</module>
         <module>producer-client</module>
         <module>producer-server</module>
+        <module>consumer-server</module>
     </modules>
     <dependencyManagement>
         <dependencies>
