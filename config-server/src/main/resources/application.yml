@@ -1,0 +1,27 @@
+server:
+  port: 8762
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: http://192.168.56.101:10080/demo/config-repo.git
+          searchPaths: '{application}'
+          username: demo
+          password: 123456
+          basedir: /usr/local/repo
+
+  # webhook\u5237\u65B0\u8BF7\u6C42\u53D1\u9001\u5230\u6D88\u606F\u603B\u7EBF
+  rabbitmq:
+    addresses: 192.168.56.101:5672
+    username: julei
+    password: 123456
+    virtual-host: bus
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
