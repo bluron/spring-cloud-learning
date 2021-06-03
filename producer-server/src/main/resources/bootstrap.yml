@@ -1,0 +1,19 @@
+server:
+  port: 8889
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+spring:
+  application:
+    name: producer-server
+  cloud:
+    config:
+      profile: prod
+      discovery:
+        enabled: true
+        serviceId: config-server
+    bus:
+      id: ${spring.application.name}:${spring.cloud.config.profile}:${random.value}

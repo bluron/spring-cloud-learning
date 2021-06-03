@@ -22,6 +22,7 @@
         <module>eureka-server</module>
         <module>config-server</module>
         <module>producer-client</module>
+        <module>producer-server</module>
     </modules>
     <dependencyManagement>
         <dependencies>
