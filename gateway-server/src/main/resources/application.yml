@@ -1,0 +1,27 @@
+server:
+  port: 8999
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: gateway-server
+          uri: https://baidu.com
+          predicates:
+            - After=2021-06-04T16:00:00.789+08:00[Asia/Shanghai]
+#            - Before=2020-08-16T17:11:00.789+08:00[Asia/Shanghai]
+#            - Between=2020-08-16T16:55:00.789+08:00[Asia/Shanghai], 2020-08-16T17:20:00.789+08:00[Asia/Shanghai]
+#            - Cookie=chocolate, ch.p
+#            - Header=X-Request-Id, \d+
+#            - Method=GET
+#            - Path=/red/{segment},/blue/{segment}
+#            - Query=red, gree.
+        # \u6743\u91CD\u65AD\u8A00
+#        - id: weight_high
+#          uri: https://baidu.com
+#          predicates:
+#            - Weight=group1, 8
+#        - id: weight_low
+#          uri: https://taobao.com
+#          predicates:
+#            - Weight=group1, 2

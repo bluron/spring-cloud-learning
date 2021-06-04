@@ -24,6 +24,7 @@
         <module>producer-client</module>
         <module>producer-server</module>
         <module>consumer-server</module>
+        <module>gateway-server</module>
     </modules>
     <dependencyManagement>
         <dependencies>
